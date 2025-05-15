@@ -4,11 +4,12 @@ FROM debian:bookworm-slim
 # Get downloader
 ADD https://www.ravenports.com/repository/ravenports-downloader.sh downloader.sh
 
-# install wget
-RUN apt-get update \
-    && apt-get install -y wget \
-    && apt-get install -y lsof \
-    && apt-get install -y binutils
+# install tools
+RUN apt-get update
+RUN apt-get install -y wget
+RUN apt-get install -y lsof
+RUN apt-get install -y binutils
+RUN apt-get install -y man-db
 
 # Install Ravenports
 RUN bash downloader.sh

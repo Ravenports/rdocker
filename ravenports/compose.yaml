@@ -21,3 +21,4 @@ services:
       - /srv/specs:/var/ravenports/specs
       - /srv/ccache-raven:/var/cache/ccache
       - /srv/cache-rvn:/var/cache/rvn
+      - ./ravenports/ravenadm:/raven/etc/ravenadm
