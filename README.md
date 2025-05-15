@@ -50,6 +50,11 @@ The environment should be ready to immediately build packages at the prompt.
 ### Example build command
 
 The 12-character hash of the prompt is the first part of the container ID.
+Before the first build, the ports tree needs to be installed.
+```
+root@f17ca472f938:/# rvn install ravenports
+```
+
 THe following command will build the m4 package set along with any unbuilt dependencies.
 ```
 root@f17ca472f938:/# ravenadm build m4
