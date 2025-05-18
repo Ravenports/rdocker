@@ -10,6 +10,8 @@ RUN apt-get install -y wget
 RUN apt-get install -y lsof
 RUN apt-get install -y binutils
 RUN apt-get install -y man-db
+RUN apt-get install -y openssh-client
+RUN apt-get install -y nano
 
 # Install Ravenports
 RUN bash downloader.sh
@@ -25,9 +27,6 @@ RUN /raven/sbin/rvn install -y ravenports~
 
 # Wait to update to latest release - mappings not available during build
 RUN find /var/cache/rvn ! -type d -delete
-
-# Overwrite configuration
-COPY ravenadm.ini /raven/etc/ravenadm/ravenadm.ini
 
 # Forever command to keep container running for interactive use
 ENTRYPOINT ["tail", "-f", "/dev/null"]
