@@ -14,7 +14,8 @@ second set of Docker definition files.
    2. full ports tree (default **/srv/specs**)
    3. ccache files (default **/srv/ccache-raven**)
    4. rvn cache files (default **/srv/cache-rvn**)
-   5. copy of ravensourse (default **/srv/ravensource**)
+   5. distribution files case (default **/srv/distfiles**)
+   6. ravensource tree (default **/srv/ravensource**)
 1. Edit the ___rdocker/ravenports/compose.yaml___ file as necessary.
    1. The webserver listens to port 4040.
    2. ravenadm profile localchost volume

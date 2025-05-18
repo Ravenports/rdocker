@@ -18,6 +18,7 @@ services:
     privileged: true
     volumes:
       - /srv/rvnprofile:/var/ravenports/primary
+      - /srv/distfiles:/var/ravenports/distfiles
       - /srv/specs:/var/ravenports/specs
       - /srv/ccache-raven:/var/cache/ccache
       - /srv/cache-rvn:/var/cache/rvn
